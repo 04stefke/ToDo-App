@@ -22,6 +22,10 @@ const TodoWrapper = () => {
     const deleteTodo = id => {
       setTodos(todos.filter(todo => todo.id !== id))
     }
+
+    const toggleComplete = id => {
+      setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo))
+    }
   return (
     <div className='container'>
         <h1 className='title'>Lets get some things out of the way!</h1>
