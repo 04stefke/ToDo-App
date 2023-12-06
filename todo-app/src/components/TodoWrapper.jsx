@@ -18,14 +18,18 @@ const TodoWrapper = () => {
     const editTask = (task, id) => {
       setTodos(todos.map(todo => todo.id === id ? {...todo, task, isEditing: !todo.isEditing} : todo))
     }
+
+    const deleteTodo = id => {
+      setTodos(todos.filter(todo => todo.id !== id))
+    }
   return (
     <div className='container'>
         <h1 className='title'>Lets get some things out of the way!</h1>
         <TodoForm addTodo={addTodo}/>
         {todos.map((todo, index) => (
         todo.isEditing ? (
-          <EditTodoForm task={todo} key={index} toggleComplete={toggleComplete} editToDo={editTask}/>
-        ) : (<Todo task={todo} key={index} toggleComplete={toggleComplete} editToDo={editToDo}/>)
+          <EditTodoForm task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editToDo={editTask}/>
+        ) : (<Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editToDo={editToDo}/>)
       ))}
     </div>
   )
