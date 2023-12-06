@@ -4,7 +4,7 @@ const TodoForm = ({addTodo}) => {
     const [value, setValue] = useState('')
     const handleSubmit = e => {
         e.preventDefault()
-        addTodo(e)
+        addTodo(value)
         setValue('')
     }
   return (
