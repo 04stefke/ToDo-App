@@ -1,0 +1,58 @@
+body{
+    background-color: #F7EFE5;
+}
+.container{
+    text-align: center;
+    position: relative;
+    top: 200px;
+    background-color: #7743DB; 
+    padding: 50px;
+    max-width: 500px;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
+}
+.title{
+    color: #FFFBF5 ;
+}
+
+.todo-task{
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    color: #F7EFE5; 
+    background-color: #C3ACD0;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.completed{
+    text-decoration: line-through;
+    cursor: pointer;
+}
+.not-completed{
+    cursor: pointer;
+}
+
+.icon{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.btn{
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.input{
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
+    cursor: text;
+    margin-bottom: 30px;
+}
